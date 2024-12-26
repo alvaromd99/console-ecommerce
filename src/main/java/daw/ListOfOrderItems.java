@@ -32,9 +32,9 @@ public class ListOfOrderItems {
      * otherwise.
      */
     public boolean addItem(Product product, int quantity) {
-        for (OrderItem item : list) {
-            if (item.getProduct().equals(product)) {
-                item.setQuantity(item.getQuantity() + quantity);
+        for (OrderItem orderItem : list) {
+            if (orderItem.getProduct().equals(product)) {
+                orderItem.setQuantity(orderItem.getQuantity() + quantity);
                 return true;
             }
         }
@@ -50,7 +50,12 @@ public class ListOfOrderItems {
      * not found.
      */
     public boolean removeItem(Product product) {
-        // Remove the item
+        for (OrderItem orderItem : list) {
+            if (orderItem.getProduct().equals(product)) {
+                list.remove(orderItem);
+                return true;
+            }
+        }
         return false;
     }
 
