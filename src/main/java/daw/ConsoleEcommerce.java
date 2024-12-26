@@ -11,6 +11,7 @@ package daw;
 public class ConsoleEcommerce {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Product p1 = new Product(1, "Television", 444.99, Category.ELECTRONICS);
+        System.out.println(p1);
     }
 }

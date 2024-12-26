@@ -28,7 +28,7 @@ public class Product {
         sb.append("{");
         sb.append("productId = ").append(productId);
         sb.append(", name = ").append(name);
-        sb.append(", price = ").append(price);
+        sb.append(", price = ").append(price).append(" €");
         sb.append(", category = ").append(category);
         sb.append('}');
         return sb.toString();

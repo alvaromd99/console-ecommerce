@@ -10,11 +10,13 @@ package daw;
  */
 public class User {
 
+    private int userId;
     private String name;
     private String lastName;
     private String email;
 
-    public User(String name, String lastName, String email) {
+    public User(int userId, String name, String lastName, String email) {
+        this.userId = userId;
         this.name = name;
         this.lastName = lastName;
         this.email = email;
