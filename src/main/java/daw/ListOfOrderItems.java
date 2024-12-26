@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author alvaro
  */
 public class ListOfOrderItems {
+
     // Internal list to store the items
     private final ArrayList<OrderItem> list;
 
@@ -31,8 +32,14 @@ public class ListOfOrderItems {
      * otherwise.
      */
     public boolean addItem(Product product, int quantity) {
-        // Add or update the item
-        return false;
+        for (OrderItem item : list) {
+            if (item.getProduct().equals(product)) {
+                item.setQuantity(item.getQuantity() + quantity);
+                return true;
+            }
+        }
+        list.add(new OrderItem(product, quantity));
+        return true;
     }
 
     /**
